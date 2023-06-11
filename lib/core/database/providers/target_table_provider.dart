@@ -5,7 +5,7 @@ class TargetTableProvider extends BaseTableProvider {
   // 列名
   final String columnId = "id";
   final String columnTargetName = "t_name";
-  final String columnTargetDay = "t_day";
+  final String columnTargetDay = "t_days";
   final String columnTargetColors = "t_colors";
   final String columnTargetSoundKey = "t_sound_key";
   final String columnTargetNotificationTimes = "t_notification_time";
@@ -24,7 +24,7 @@ class TargetTableProvider extends BaseTableProvider {
       CREATE TABLE $tablename (
         $columnId INTEGER PRIMARY KEY AUTOINCREMENT,
         $columnTargetName TEXT NOT NULL,
-        $columnTargetDay TEXT NOT NULL,
+        $columnTargetDay INT NOT NULL,
         $columnTargetColors TEXT NOT NULL,
         $columnTargetSoundKey TEXT NOT NULL,
         $columnTargetNotificationTimes TEXT NOT NULL,

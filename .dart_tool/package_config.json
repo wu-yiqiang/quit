@@ -8,6 +8,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "auto_animated",
+      "rootUri": "file:///Users/atlas/.pub-cache/hosted/pub.dev/auto_animated-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///Users/atlas/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -94,6 +100,12 @@
     {
       "name": "get",
       "rootUri": "file:///Users/atlas/.pub-cache/hosted/pub.dev/get-4.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/atlas/.pub-cache/hosted/pub.dev/intl-0.17.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -230,6 +242,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "visibility_detector",
+      "rootUri": "file:///Users/atlas/.pub-cache/hosted/pub.dev/visibility_detector-0.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///Users/atlas/.pub-cache/hosted/pub.dev/xml-5.4.1",
       "packageUri": "lib/",
@@ -242,7 +260,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-06-03T08:06:20.467349Z",
+  "generated": "2023-06-10T14:38:13.747882Z",
   "generator": "pub",
   "generatorVersion": "3.0.2"
 }

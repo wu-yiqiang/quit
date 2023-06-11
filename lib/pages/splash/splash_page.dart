@@ -5,6 +5,8 @@ import 'package:quit/common/config.dart';
 import 'package:quit/models/illustration.dart';
 import 'package:quit/pages/splash/splash_controller.dart';
 
+import '../../routes/app_routes.dart';
+
 class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +75,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                             height: 50,
                             child: TextButton(
                               onPressed: () {
-                                //
+                                Get.toNamed(Routes.HOME);
                               },
                               style: ButtonStyle(
                                   backgroundColor:
@@ -91,7 +93,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                                       RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(14.0)))),
-                              child: Text('开启一段崭新的寻找之旅',
+                              child: Text('加入Quit',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18.0,
@@ -104,7 +106,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                             width: 220,
                             height: 50,
                             alignment: Alignment.center,
-                            child: Text('一起探寻萨特的磨坊',
+                            child: Text('嘿，你开始锻炼了吗？',
                                 style: TextStyle(
                                     color: textGreyColor,
                                     fontSize: 22,

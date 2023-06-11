@@ -5,6 +5,7 @@ import 'package:sqflite/sqflite.dart';
 
 class SplashConstroller extends GetxController {
   List<Illustration> illustrations = List.from(splashIllustrations);
+
   @override
   void onInit() {
     super.onInit();
@@ -13,6 +14,6 @@ class SplashConstroller extends GetxController {
   @override
   void onReady() async {
     super.onReady();
-    print("啊啊的深度萨" + await getDatabasesPath());
+    print("存储路径" + await getDatabasesPath());
   }
 }

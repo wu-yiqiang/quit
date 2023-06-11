@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:quit/common/config.dart';
 import 'package:quit/models/illustration.dart';
 import 'package:quit/pages/splash/splash_controller.dart';
-
 import '../../routes/app_routes.dart';
 
 class SplashPage extends StatelessWidget {
@@ -35,11 +34,12 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
       fit: StackFit.expand,
       children: [
         PageView.builder(
-            itemCount: 2,
+            itemCount: 3,
             // pageSnapping: true,
             onPageChanged: (index) {
               setState(() {
                 _currentIndex = index;
+                print('当前页码值 $_currentIndex $index');
               });
             },
             itemBuilder: (BuildContext context, int index) {
@@ -68,49 +68,64 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                             fontWeight: FontWeight.w300),
                       ),
                     ),
-                    index == splashConstroller.illustrations.length - 1
+                    index == 0
                         ? Container(
-                            margin: const EdgeInsets.only(top: 160),
-                            width: 240,
-                            height: 50,
-                            child: TextButton(
-                              onPressed: () {
-                                Get.toNamed(Routes.HOME);
-                              },
-                              style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.resolveWith(
-                                          (states) => commonGreenColor),
-                                  textStyle:
-                                      MaterialStateProperty.all(TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w400,
-                                    letterSpacing: 0.5,
-                                  )),
-                                  foregroundColor:
-                                      MaterialStateProperty.all(textBlackColor),
-                                  shape: MaterialStateProperty.all(
-                                      RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(14.0)))),
-                              child: Text('加入Quit',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                    height: 1.2,
-                                  )),
-                            ),
-                          )
-                        : Container(
-                            margin: const EdgeInsets.only(top: 100),
+                            margin: const EdgeInsets.only(top: 60),
                             width: 220,
                             height: 50,
                             alignment: Alignment.center,
-                            child: Text('嘿，你开始锻炼了吗？',
+                            child: Text('往左滑动查看下一页',
                                 style: TextStyle(
                                     color: textGreyColor,
                                     fontSize: 22,
                                     fontWeight: FontWeight.w700)))
+                        : index == 1
+                            ? Container(
+                                margin: const EdgeInsets.only(top: 60),
+                                width: 220,
+                                height: 50,
+                                alignment: Alignment.center,
+                                child: Text('请再次往左滑动',
+                                    style: TextStyle(
+                                        color: textGreyColor,
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w700)))
+                            : index == 2
+                                ? Container(
+                                    margin: const EdgeInsets.only(top: 60),
+                                    width: 240,
+                                    height: 50,
+                                    child: TextButton(
+                                      onPressed: () {
+                                        Get.toNamed(Routes.HOME);
+                                      },
+                                      style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.resolveWith(
+                                                  (states) => commonGreenColor),
+                                          textStyle: MaterialStateProperty.all(
+                                              TextStyle(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w400,
+                                            letterSpacing: 0.5,
+                                          )),
+                                          foregroundColor:
+                                              MaterialStateProperty.all(
+                                                  textBlackColor),
+                                          shape: MaterialStateProperty.all(
+                                              RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          14.0)))),
+                                      child: Text('加入Quit训练营',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.0,
+                                            height: 1.2,
+                                          )),
+                                    ),
+                                  )
+                                : Container()
                   ]);
 
               return index == 0
@@ -122,7 +137,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
         Positioned(
             left: 0,
             right: 0,
-            bottom: MediaQuery.of(context).padding.bottom + 40,
+            bottom: MediaQuery.of(context).padding.bottom + 20,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -143,6 +158,16 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: _currentIndex == 1
+                          ? Colors.grey
+                          : Colors.grey.withOpacity(0.5)),
+                ),
+                Container(
+                  width: 8.0,
+                  height: 8.0,
+                  margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: _currentIndex == 2
                           ? Colors.grey
                           : Colors.grey.withOpacity(0.5)),
                 )

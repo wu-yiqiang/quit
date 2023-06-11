@@ -9,6 +9,7 @@ final Color commonGreenColor = Color.fromRGBO(195, 221, 83, 1);
 final List splashIllustrations = [
   Illustration(assets: 'assets/illustration/1.svg', copyRight: ''),
   Illustration(assets: 'assets/illustration/2.svg', copyRight: ''),
+  Illustration(assets: 'assets/illustration/3.svg', copyRight: ''),
 ];
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey();

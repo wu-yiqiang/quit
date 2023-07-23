@@ -1,10 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quit/common/config.dart';
 import 'package:quit/pages/target/target_controller.dart';
+import 'package:quit/pages/target/target_edit.dart';
 import '../../common/widgets/navigator_bar.dart';
 import 'package:auto_animated/auto_animated.dart';
 import "package:quit/models/target.dart";
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class TargetPage extends StatelessWidget {
   final TargetConstroller targetConstroller = Get.find<TargetConstroller>();
@@ -14,7 +17,14 @@ class TargetPage extends StatelessWidget {
       return const SizedBox.shrink();
     }
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        CupertinoScaffold.showCupertinoModalBottomSheet(
+            context: context,
+            builder: (context) => TargetEditPage(target),
+            enableDrag: true,
+            expand: true,
+            backgroundColor: Colors.transparent);
+      },
       child: Container(
           margin: EdgeInsets.only(
               top: index == 0 ? 15 : 10,
@@ -63,7 +73,9 @@ class TargetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CupertinoScaffold(
+        body: CupertinoPageScaffold(
+            child: Scaffold(
       backgroundColor: Colors.white,
       appBar: NavigatorBar(
         title: '挑战目标',
@@ -85,6 +97,6 @@ class TargetPage extends StatelessWidget {
             }),
             itemCount: targetConstroller.targets.length),
       ),
-    );
+    )));
   }
 }

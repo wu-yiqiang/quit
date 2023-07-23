@@ -70,7 +70,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                     ),
                     index == 0
                         ? Container(
-                            margin: const EdgeInsets.only(top: 60),
+                            margin: const EdgeInsets.only(top: 70),
                             width: 220,
                             height: 50,
                             alignment: Alignment.center,
@@ -81,7 +81,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                                     fontWeight: FontWeight.w700)))
                         : index == 1
                             ? Container(
-                                margin: const EdgeInsets.only(top: 60),
+                                margin: const EdgeInsets.only(top: 70),
                                 width: 220,
                                 height: 50,
                                 alignment: Alignment.center,
@@ -92,7 +92,7 @@ class _pageViewWidgetState extends State<_PageViewWidget> {
                                         fontWeight: FontWeight.w700)))
                             : index == 2
                                 ? Container(
-                                    margin: const EdgeInsets.only(top: 60),
+                                    margin: const EdgeInsets.only(top: 70),
                                     width: 240,
                                     height: 50,
                                     child: TextButton(

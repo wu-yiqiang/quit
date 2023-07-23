@@ -40,7 +40,7 @@ class NavigatorBar extends StatelessWidget implements PreferredSizeWidget {
                   child: Text(
                     title ?? '',
                     style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 20,
                         color: baseColor,
                         fontWeight: FontWeight.w600),
                   ))),

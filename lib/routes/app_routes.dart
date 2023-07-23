@@ -12,6 +12,12 @@ import '../pages/home/home_page.dart';
 import '../pages/target/target_binding.dart';
 import '../pages/target/target_page.dart';
 
+// VIDEO
+import '../pages/video/video_page.dart';
+
+// AUDIO
+import '../pages/audio/audio_page.dart';
+
 abstract class AppPages {
   static final pages = [
     GetPage(
@@ -20,9 +26,13 @@ abstract class AppPages {
         binding: SplashBinding()),
     GetPage(name: Routes.HOME, page: () => HomePage(), binding: HomeBinding()),
     GetPage(
-        name: Routes.TARGET,
-        page: () => TargetPage(),
-        binding: TargetBinding()),
+      name: Routes.VIDEO,
+      page: () => VideoPage(),
+    ),
+    GetPage(
+      name: Routes.AUDIO,
+      page: () => AudioPage(),
+    ),
   ];
 }
 
@@ -36,6 +46,9 @@ abstract class Routes {
   // home页
   static const HOME = "/home";
 
-  // 目标页
-  static const TARGET = "/target";
+  // video
+  static const VIDEO = "/video";
+
+  // audio
+  static const AUDIO = "/audio";
 }

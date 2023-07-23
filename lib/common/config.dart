@@ -12,6 +12,12 @@ final List splashIllustrations = [
   Illustration(assets: 'assets/illustration/3.svg', copyRight: ''),
 ];
 
+final List Banners = [
+  Illustration(assets: 'assets/icons/banner1.jpeg', copyRight: ''),
+  Illustration(assets: 'assets/icons/banner1.jpeg', copyRight: ''),
+  Illustration(assets: 'assets/icons/banner1.jpeg', copyRight: ''),
+];
+
 GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 final List<Target> defaultTargets = [
   Target()

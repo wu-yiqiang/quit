@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                   child: VideoPage(),
                 ),
                 Container(
-                  color: Colors.orange,
+                  // color: Colors.orange,
                   width: double.infinity,
                   height: double.infinity,
                   alignment: Alignment.center,

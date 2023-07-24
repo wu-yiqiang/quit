@@ -6,7 +6,7 @@ class VideoPage extends StatelessWidget {
     return Center(
       child: Container(
         child: Text(
-          '视频播放页面,功能暂未开放，敬请期待',
+          '视频播放功能正在开发中，敬请期待',
         ),
       ),
     );
